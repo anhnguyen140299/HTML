@@ -30,13 +30,16 @@
     </h1>
 
     <p>
-        <a href="#1">Trích dẫn ca dao</a>
+        <a href="#1">1.Trích dẫn ca dao</a>
     </p>
     <p>
-        <a href="#2">Kiểm tra đọc ngược</a>
+        <a href="#2">2.Kiểm tra đọc ngược</a>
     </p>
     <p>
-        <a href="#3">Link</a>
+        <a href="#3">3.Link</a>
+    </p>
+    <p>
+        <a href="#4">4.Image</a>
     </p>
     
     <h2 id="1">
@@ -68,8 +71,9 @@
     <p>
         Bài ca dao <abbr title="Tát nước đầu đình"><cite>TNDD</cite></abbr> là...........................................................................................................................
     </p>
+
     <h2 id="2">
-        <bdo dir="rtl">Kiểm tra khả năng đọc ngược.2</bdo>
+        <bdo dir="rtl">Kiểm tra khả năng đọc ngược .2</bdo>
     </h2>
     <!--éc. hôm ni nói học sớm mà chơi tới tận 11h mới học-->
     <p style="border:2px solid tomato;">
@@ -84,7 +88,7 @@ External - by using a <link> element to link to an external CSS file
 The most common way to add CSS, is to keep the styles in external CSS files. 
 However, in this tutorial we will use inline and internal styles, 
 because this is easier to demonstrate, and easier for you to try it yourself.-->
-    <h2 id="3">3.Link</h2>
+    <h2 id="3">3. Link</h2>
     <p>
         Click vào hình bên dưới để đăng nhập Facebook.
     </p>
@@ -99,10 +103,60 @@ because this is easier to demonstrate, and easier for you to try it yourself.-->
             onclick="document.location='https://vi-vn.facebook.com' "> FB 
         </button> to go to the Facebook.
     </p>
+
+    <h2 id="4">4. Image</h2>
     <p>Click the picture below to see more information</p>
     <a href="https://locobee.com/mag/vi/2021/02/28/y-nghia-cua-hoa-nemophila-trong-van-hoa-nhat-ban/" target="_blank">
         <img src="https://locobee.com/mag/wp-content/uploads/2021/02/locobee-use-hoanemophila-1.jpg" alt="Hoa" style=" float:left;width:128px;height:128px;">
     </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>
+        Click on the cat or the dog to go to a new page and read more about the topic:
+    </p>
+
+    <img src="https://linhsonphatgiao.com/static/2017/04/chomeo.jpg"
+    alt="Dog and cat" usemap="#dogandcat" width="500" height="300">
+    <map name="dogandcat">
+        <area shape="poly"
+        coords="0,200,125,125,75,100,200,0,250,75,250,270,150,270,150,0,50,0"
+        alt="Dog" href="https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/dogs/your-dogs-welfare-needs" 
+        target="_blank"
+        onclick="myFunction">
+        <area shape="poly"
+        coords="250,250,250,0,300,250,300,200,450,150,450,0"
+        alt="Cat" href="https://www.oprahdaily.com/life/a32884389/signs-your-cat-loves-you/"
+        target="_blank">
+    </map>
+
+    <script>
+        function myFunction() {
+            alter("You clicked on the dog!");
+        }
+        
+    </script>
+
+
+    <img src="cat.jpg" alt="cat" usemap="#cat" width="400" height="400">
+    <map name="cat">
+        <area shape="default"
+        href="https://www.oprahdaily.com/life/a32884389/signs-your-cat-loves-you/"
+        target="_blank"
+        onclick="abc">
+    </map>
+    <script>
+        function abc {
+            alter("abc");
+        }
+    </script>
+   
     
 </body>
 </html>
