@@ -7,8 +7,40 @@
     <title>Bé Anh 3</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        th{
+        table, th, td{
             border:1px solid black;
+            border-collapse: collapse;
+            padding:10px;
+        }
+        
+        tr:hover {
+            background-color:rgb(214, 236, 235);
+        }
+        th:nth-child(even),td:nth-child(even) {
+            background-color:rgb(214, 236, 235);
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
         }
         h3 {
             color: red;
@@ -25,14 +57,17 @@
     <p>
         <a href="#1">1. Table</a>
     </p>
-    
+    <p>
+        <a href="#2">2. List</a>
+    </p>
     <h2 id="1">
         1. Table
     </h2>
-
-    <h3>Timetable</h3>
-    <table style="text-align:center;">
-        <tr>
+    <h3>Timetable</h3>    
+    <table style="text-align:center;  ">
+        <caption style="text-align: right;">First Semester</caption>
+    
+        <tr style="color:rgb(25, 26, 126);">
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -60,8 +95,72 @@
             <td></td>
             <td>Physic</td>
         </tr>
-
     </table>
+
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3>Timetable</h3>    
+    <table style="text-align:center; width: 100%;">
+    <colgroup>
+        <col span="1" >     <!--If you want to style columns in the middle of a table, insert a "empty" <col> element (with no styles) for the columns before -->
+        <col span="1" >
+        <col span="1" style="background-color: pink">
+    </colgroup>
+        <caption style="text-align: right;">First Semester</caption>
+    <!--The <colgroup> tag must be a child of a <table> element and 
+        should be placed 
+        before any other table elements, like <thead>, <tr>, <td> etc., 
+        but after the <caption> element, if present. -->
+        
+        <tr style="color:rgb(25, 26, 126);">
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thurstday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td>Math</td>
+            <td>Literature</td>
+            <td>Biology</td>
+            <td>Chemistry</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>Physic</td>
+            <td>Biology</td>
+            <td>Chemistry</td>
+            <td>Literature</td>
+        </tr>
+        <tr>
+            <td>Literature</td>
+            <td>Math</td>
+            <td>English</td>
+            <td></td>
+            <td>Physic</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <h2 id="2">
+        2. List
+    </h2>
+
+    <ul>
+        <li><a href="1index.htm">1index</a></li>
+        <li><a href="2index.html">2index</a></li>
+        <li><a href="styles.css">style>.css</a></li>
+        <li><a href="cat.jpg">cat</a></li>
+      </ul>
+      
+    
+
+
 
 </body>
 </html>
