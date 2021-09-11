@@ -19,29 +19,7 @@
         th:nth-child(even),td:nth-child(even) {
             background-color:rgb(214, 236, 235);
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111111;
-        }
+        
         h3 {
             color: red;
             text-align: center;
@@ -51,7 +29,7 @@
 <body>
 
     <h1 style="color:rgb(190, 16, 190); text-align:center;">
-       2021/9/5 の勉強した内容
+       Table - List - Block - Inline
     </h1>
 
     <p>
@@ -59,6 +37,9 @@
     </p>
     <p>
         <a href="#2">2. List</a>
+    </p>
+    <p>
+        <a href="#3">3. Block and inline</a>
     </p>
     <h2 id="1">
         1. Table
@@ -151,16 +132,74 @@
         2. List
     </h2>
 
-    <ul>
-        <li><a href="1index.htm">1index</a></li>
-        <li><a href="2index.html">2index</a></li>
-        <li><a href="styles.css">style>.css</a></li>
-        <li><a href="cat.jpg">cat</a></li>
-      </ul>
-      
+    <ul style="background-color: #afe41d; list-style-type:none; margin-bottom: 30px;">
+        <li style="float:left"><a href="1index.htm">1index</a></li>
+        <li style="float:left"><a href="2index.html">2index</a></li>
+        <li style="float:left"><a href="styles.css">style.css</a></li>
+        <li style="float:none"><a href="cat.jpg">cat</a></li>
+    </ul>
+    <br>
     
+    <p>Chapter</p>
+    <ol type="I">
+        <li>The first day after getting the covid vaccine</li>
+            <ol type="1">
+                <li>Get a temperature</li>
+                    <dd>>39 degree</dd>
+                <li>headache</li>
+            </ol>
+        <li>The second day </li>
+            <ol type="1">
+                <li>madawakannai</li>
+            </ol>
+    </ol>
+    <hr>
+    <p>Menu</p>
+    <ul style="list-style-type: square;">
+        <li>Coffee</li>
+        <li>Tea
+          <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+          </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+    <br>
+    <h2 id="3">
+        3. Block and inline
+    </h2>
+    <p>
+        <ol type="a">
+            <li><b>Block:</b></li>
+                <dd>
+                    A block-level element always <span style="color:red; font-weight: bold;">starts on a new line</span>.
+                    <br>
+                    A block-level element always takes up the <span style="color:red;font-weight:bold;">full width</span> available (stretches out to the left and right as far as it can).
+                    <br>
+                    A block level element <span style="color:red; font-weight: bold;">has a top and a bottom margin</span>, whereas an <span style="color:red; font-weight: bold;">inline</span> element <span style="color:red; font-weight: bold;">does not</span>.
+                    <br>
+                    <u><i>For example</i></u>: The DIV element is a block element.
+                </dd>
+                <br>
+                <div style="border: 1px solid black">
+                    Hello World
+                </div>
+                <br>
+                <br>
+            <li><b>Inline:</b></li>
+                <dd>
+                    An inline element <span style="color:red; font-weight: bold;">does not start on a new line</span>.
+                    <br>
+                    An inline element <span style="color:red; font-weight: bold;">only takes up as much width as necessary</span>.
+                    <br>
+                    <u><i>For example</i></u>: The SPAN element is a inline element.
+                </dd>
+                <br>
+                <span style="border: 1px solid black">Hello World</span>
+    </p>
 
 
-
+    
 </body>
 </html>
