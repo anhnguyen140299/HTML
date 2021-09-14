@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anh 4</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .city {
+            background-color: rgb(241, 237, 237);
+            color: rgb(247, 36, 36);
+        }
+        .rural {
+            border: 2px solid red;
+            margin: 10px;
+            padding: 3px;
+        }
+        #myHeader {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color:blue; text-align:center;">
+            CLASSES - ID - IFRAMES - JAVASCRIPT - FILE PATHS
+    </h1>
+    <p>
+        <a href="#1">1. Classes</a>
+    </p>
+    <p>
+        <a href="#2">2. ID</a>
+    </p>
+    <P>
+        <a href="#3">3. Iframes</a>
+    </P>
+    <p>
+        <a href="#4">4. Javascript</a>
+    </p>
+    <p>
+        <a href="#5">5. File Paths</a>
+    </p>
+
+    <h2 id="1">1. Classes</h2>
+    <dd>- Can also be used by a JavaScript to access and manipulate elements with the specific class name.</dd>
+    <dd>- The <span class="city">class</span>  attribute can be used on <b><span id="myHeader">any</span></b> HTML element.</dd>
+    <dd>- To create a class; write a period (<span class="city" ><b> . </b></span>) character, followed by a class name.</dd>     
+    <dd>- HTML elements can belong to <b><span id="myHeader">more than one</span></b> class.</dd>    
+    <dd>- To define multiple classes, separate the class names with a <b><span id="myHeader">space</span></b>, e.g. class="city main".</dd>
+
+    <h2 id="2">2. ID</h2>
+    <h2 id="3">3. Iframes</h2>
+    <pre style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 93%;">
+        - An HTML iframe is used to display a web page within a web page.
+        - The HTML <span class="city">iframe</span> tag specifies an inline frame.
+    </pre>
+
+    <iframe scr="3index.html" name="iframe_3" title="Iframe 1" height="300px" width="100%">
+    </iframe>
+
+    <p>
+        Click the link 
+        <a href="3index.html" target="iframe_3">htmltable.com</a>
+        to see more information.
+    </p>
+
+    <h2 id="4">4. JavaScript</h2>
+    <dd>- JavaScript can change attributes</dd>
+    <script>
+        function cat(a) {
+            var pic;
+            if (a==0) {
+                pic="cat.gif"
+            } else {
+                pic="catpause.png"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+    <img id="myImage" scr="catpause.png" width="100" height="100">
+    <p> 
+        <button type="button" onclick="cat(1)">
+            Click to pause the cat
+        </button>
+        <button type="button" onclick="cat(0)">
+            Click to see the cat drinking water
+        </button>
+    </p>
+    <br>   
+
+    <dd id="changestyles">- JavaScript can change the style of an HTML element.</dd>
+    <script>
+        function myFunction() {
+            document.getElementById("changestyles").style.fontSize = "25px"; 
+            document.getElementById("changestyles").style.color = "red";
+            document.getElementById("changestyles").style.backgroundColor = "yellow";        
+        }
+    </script>
+    <button type="button" onclick="myFunction()">Click to change styles</button>
+    <br>
+    <br>
+    <br>
+
+    <dd>- JavaScript can change the content of an HTML element:</dd>
+    <button type="button" onclick="myFunction1()">
+        Click to change the content    
+    </button>
+    <p id="changecontent">Hello!</p>
+    <script>
+        function myFunction1() {
+            document.getElementById("changecontent").innerHTML="Hi!";            
+        }
+    </script>
+    
+    <h2 id="5">5. File Paths</h2>
+    <dd>- File Paths example:</dd>
+    <img src="filepaths.PNG" alt="file paths" width="600" height="400">
+    
+
+</body>
+</html>
