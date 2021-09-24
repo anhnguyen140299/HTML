@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anh 7</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        ol {
+            font-weight: bold;
+        }
+
+        li {
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: normal;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Forms</h1>
+    <p>
+        <a href="#1">1. Forms</a>
+    </p>
+    <p>
+        <a href="#2">2. Form Attributes</a>
+    </p>
+    <p>
+        <a href="#3">3. Form Elements</a>
+    </p>
+    <p>
+        <a href="#4">4. Input types</a>
+    </p>
+    <p>
+        <a href="#5">5. Input Attributes</a>
+    </p>
+    <p>
+        <a href="#6">6. Input Form Attributes</a>
+    </p>
+    
+    <h2 id="1">1. Forms</h2>
+    <ol type="a">
+        <li>Text input fields</li>
+        <form>
+            <label for="fname">First name:</label>
+            <br>
+            <input type="text" id="fname" name="fname" value="Jonh">
+            <br>
+            <label for="lname">Last name:</label>
+            <br>
+            <input type="text" id="lname" name="lname" value="Doe">
+        </form>
+        <br>
+
+        <li>Radio Buttons</li>
+        <p style="font-weight: normal;">Choose your favorite Web language:</p>
+        <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label>
+            <br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label>
+            <br>
+            <input type="radio" id="js" name="fav_language" value="JS">
+            <label for="js">JS</label>
+        </form>
+        <br>
+
+        <li>Checkboxes</li>
+        <p style="font-weight: normal;">Check</p>
+        <form action="6index.html">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="bike">
+            <label for="vehicle1">I have a bike</label>
+            <br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="car">
+            <label for="vehicle2">I have a car</label>
+            <br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="boat">
+            <label for="vehicle3">I have a boat</label>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <li>The name Attribute and Submit Button</li>
+        <form action="5index.html" target="_blank" method="get">
+            <label for="fname">First name:</label>
+            <br>
+            <input type="text" id="fname" name="fname" value="">
+            <br>
+            <label for="lname">Last name:</label>
+            <br>
+            <input type="text" id="lname" name="lname" value="">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </ol>
+
+    <h2 id="2">2. Form Attributes</h2>
+    <ol type="a">
+        <li>The action attribute</li>
+        <li>The target attribute</li>
+        <img src="target.PNG" width="60%">
+        <li>The method attribute</li>
+        <dd style="font-weight:normal">
+            Always use POST if the form data contains sensitive or personal information!
+        </dd>
+        <li>The autocompelete attribute</li>
+        <dd style="font-weight: normal;">
+            When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+        </dd>
+        <br>
+        <p style="font-weight: normal;"><u>Autocompelete ON:</u></p>
+        <form action="4index.html" target="_blank" autocomplete="on">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" value="">
+            <br>
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" value="">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        <p style="font-weight: normal;"><u>Autocompelete OFF:</u></p>
+        <form action="4index.html" target="_blank" autocomplete="off">
+            <label for="fname1">First name:</label>
+            <input type="text" id="fname1" name="fname1" value="">
+            <br>
+            <br>
+            <label for="lname1">Last name:</label>
+            <input type="text" id="lname1" name="lname1" value="">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+
+        <p style="font-weight: normal;"><u>Autocompelete ON:</u></p>
+        <form action="4index.html" target="_blank" autocomplete="on">
+            <label for="fname1">First name:</label>
+            <input type="text" id="fname1" name="fname"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <input type="submit">
+        </form>
+        <br>
+        <p style="font-weight: normal;"><u>Autocompelete OFF:</u></p>
+        <form action="4index.html" target="_blank" autocomplete="off">
+            <label for="fname2">First name:</label>
+            <input type="text" id="fname2" name="fname"><br><br>
+            <label for="email2">Email:</label>
+            <input type="text" id="email2" name="email"><br><br>
+            <input type="submit">
+        </form>
+        <li>The novalidate attibute</li>
+        <dd style="font-weight: normal;">
+            - The novalidate attribute is a boolean attribute.
+        </dd>
+        <dd style="font-weight: normal;">
+            - When present, it specifies that the form-data (input) should not be validated when submitted.
+        </dd>
+        <form action="4index.html" novalidate>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="submit">
+        </form>
+    </ol>
+
+    <h2 id="3">3. Form Elemants</h2>
+    <ol type="a">
+        <li>The &#60;select&#62; element </li>
+        <form action="4index.html" target="_blank">
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option valur="audi">Audi</option>
+            </select>
+            <input type="submit">
+        </form>
+    </ol>
+
+
+
+    
+</body>
+</html>
