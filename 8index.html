@@ -8,6 +8,150 @@
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+    <h1>HTML Graphics</h1>
+    <p>
+        <a href="#1">1. Canvas</a>
+    </p>
+
+    <p>
+        <a href="#2">2. SVG</a>
+    </p>
+
+    <h2 id="1">1. Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+    </script>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100,50,50,0,2*Math.PI);
+        ctx.stroke();
+    </script> 
+
+    <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+    </canvas>
     
+    <script>
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World",10,70);
+    </script>
+
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+    </canvas>
+    
+    <script>
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World",10,50);
+    </script>
+
+    <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+    </canvas>
+    
+    <script>
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        var grd = ctx.createLinearGradient(0,0,150,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+    
+    <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        
+        <script>
+        var c = document.getElementById("myCanvas4");
+        var ctx = c.getContext("2d");
+        
+        // Create gradient
+        var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+
+
+    <p>Image to use:</p>
+    <img id="cat" src="cat.jpg" alt="The cat" width="220" height="277">
+
+    <p>Canvas to fill:</p>
+    <canvas id="myCanvast" width="250" height="300"
+    style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+    <p><button onclick="myCanvast()">Try it</button></p>
+
+    <script>
+        function myCanvast() {
+        var c = document.getElementById("myCanvast");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("cat");
+        ctx.drawImage(img,10,10);
+        }
+    </script>
+
+    <a href="https://viblo.asia/p/gioi-thieu-html5-canvas-PjxMeV6gG4YL">
+    THAM KHẢO THÊM VỀ CANVAS
+    </a>
+
+    <h2 id=2>SVG</h2>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <svg width="400" height="100">
+        <rect width="400" height="100" 
+        style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <svg height="130" width="500">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"
+                style="stop-color: rgb(255,255,0);stop-opacity: 1;" />
+                <stop offset="100%"
+                style="stop-opacity: 1;stop-color: rgb(255,0,0);" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana"
+        x="50" y="86">SVG</text>
+        Sorry, your browser does not support inline SVG.
+    </svg>
+
+
 </body>
 </html>
